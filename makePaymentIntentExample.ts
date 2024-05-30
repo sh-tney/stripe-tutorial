@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import Stripe from "stripe";
 
 function getConfig() {
   dotenv.config();
@@ -7,5 +8,9 @@ function getConfig() {
   return { STRIPE_PRIVATE_KEY: process.env.STRIPE_PRIVATE_KEY };
 }
 
-console.log("hello world");
-console.log(JSON.stringify(getConfig()));
+async function main() {
+  const config = getConfig();
+  console.log("Config OK");
+}
+
+await main();

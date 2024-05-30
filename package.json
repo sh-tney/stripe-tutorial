@@ -1,16 +1,22 @@
 {
   "name": "josh-stripe-workshop",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "lint": "eslint --cache .",
     "format": "prettier --cache --write .",
     "typecheck": "tsc",
-    "serve": "serve ./frontend"
+    "frontend": "serve ./frontend",
+    "backend": "tsx ./backend/app.ts",
+    "makePaymentIntent": "tsx makePaymentIntentExample.ts"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "stripe": "^15.8.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.12.12",
     "serve": "^14.2.3",
     "tsx": "^3.12.5"
