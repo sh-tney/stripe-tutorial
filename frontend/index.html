@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="./frontend.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="onload()">
+  <form>
+    <h1>1. Enter Stripe PK</h1>
+    Stripe Public Key
+    <input id="stripekey" type="text" placeholder="stripe public key">
+
+    <button onclick="show(event)">Show card field</button>
+  </form>
+  
+  <form id='payment-form' onsubmit="doSubmit(event)">
+    <h1>2. Enter card details + PI secret</h1>
+    <label>
+      <div id="card-element"></div>
+    </label>
+    Name
+    <input id="stripename" type="text" value="Joe Bloggs" placeholder="name">
+    Payment Intent Client Secret
+    <input id="stripeclientsecret" type="text" placeholder="payment intent client secret">
+    <button type="submit" id="submitbutton">Submit Payment</button>
+  </form>
+  
+  <h1>3. Result</h1>
+  <textarea id="output"></textarea>
+</body>
+
+</html>
