@@ -7,7 +7,7 @@
     "format": "prettier --cache --write .",
     "typecheck": "tsc",
     "frontend": "serve ./frontend",
-    "backend": "tsx ./backend/app.ts",
+    "backend": "tsx watch ./backend/app.ts",
     "makePaymentIntent": "tsx makePaymentIntentExample.ts"
   },
   "dependencies": {

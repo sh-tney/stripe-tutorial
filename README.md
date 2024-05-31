@@ -1,29 +1,17 @@
-# README #
+# README
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a repo serves as template for a very simple Node-based Stripe application, with a backend server that creates PaymentIntents and responds to Stripe webhooks, as well as a simple frontend with a Stripe Checkout form.
 
-### What is this repository for? ###
+### How do I get set up?
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+1. Install the [Stripe CLI](https://docs.stripe.com/stripe-cli)
+   - `brew install stripe/stripe-cli/stripe`, or the equivalent for your package manager
+2. Grab node dependencies:
 
-### How do I get set up? ###
+   - `nvm use`
+   - `npm install`
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+3. Setup your Stripe account
+   - On the [Stripe Dashboard](https://dashboard.stripe.com/test/), go to **Settings** -> **Developers** -> **API Keys**
+   - Add the **Secret Key** to a `.env` file in this folder (refer to `.env.example`)
+   - Record the **Publishable Key** for later use in the front end.
