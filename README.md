@@ -15,3 +15,13 @@ This is a repo serves as template for a very simple Node-based Stripe applicatio
    - On the [Stripe Dashboard](https://dashboard.stripe.com/test/), go to **Settings** -> **Developers** -> **API Keys**
    - Add the **Secret Key** to a `.env` file in this folder (refer to `.env.example`)
    - Record the **Publishable Key** for later use in the front end.
+
+### How do I run this locally?
+
+Probably run each of these in a separate terminal.
+
+1. `npm run backend`
+2. `npm run frontend` - This is where that **Publishable Key** from earlier will go
+3. `stripe login` + `stripe listen --forward-to localhost:4242/webhook`
+
+#### Credit to Ben Crowl for all the `/frontend` code, original [here](https://codepen.io/mrcrowl/pen/WNJxgxR?editors=1011).
