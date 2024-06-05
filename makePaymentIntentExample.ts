@@ -11,6 +11,14 @@ function getConfig() {
 async function main() {
   const config = getConfig();
   console.log("Config OK");
+
+  const stripe = new Stripe(config.STRIPE_PRIVATE_KEY);
+  const result = await stripe.paymentIntents.create({
+    amount: 200,
+    currency: "aud",
+    capture_method: "manual",
+  });
+  console.log(JSON.stringify(result));
 }
 
 await main();
